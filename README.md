@@ -1,7 +1,10 @@
 # docker-signal
 Container for running signal-desktop
 
-Please don't use this repo anymore, use signal from flatpak, it's properly maintained.
+# error:
+docker run --rm --name docker-signal --net=host -e DISPLAY=:0 -t docker-signal
+bwrap: No permissions to creating new namespace, likely because the kernel does not allow non-privileged user namespaces. On e.g. debian this can be enabled with 'sysctl kernel.unprivileged_userns_clone=1'.
+error: ldconfig failed, exit status 256
 
 ## Build with
 docker build -t signal signal
