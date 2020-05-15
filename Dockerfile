@@ -15,8 +15,8 @@ RUN flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.
 RUN flatpak install -y flathub org.freedesktop.Platform/x86_64/19.08
 RUN flatpak install -y flathub org.signal.Signal
 
-USER root
-WORKDIR /
+#USER root
+#WORKDIR /
 #RUN apt-fast purge --autoremove flatpak
 RUN ./poobuntu-clean.sh
 RUN rm -v poobuntu-clean.sh
