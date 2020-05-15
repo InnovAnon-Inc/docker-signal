@@ -26,6 +26,6 @@ RUN rm -v poobuntu-clean.sh
 #CMD        ["/usr/bin/env", "signal-desktop"]
 #ENTRYPOINT ["/usr/bin/env", "signal-desktop"]
 
-CMD        ["/usr/bin/env", "flatpak", "run", "org.signal.Signal"]
-ENTRYPOINT ["/usr/bin/env", "flatpak", "run", "org.signal.Signal"]
+CMD        ["/usr/bin/env", "flatpak", "run", "org.signal.Signal", "--no-sandbox"]
+ENTRYPOINT ["/usr/bin/env", "flatpak", "run", "org.signal.Signal", "--no-sandbox"]
 

@@ -1,6 +1,12 @@
 # docker-signal
 Container for running signal-desktop
 
+## don't use signal... at all... ever.
+## signal has backdoors in its proprietary libraries
+## signal doesn't run in docker
+## signal doesn't run on iPhone
+## do you need more reasons?
+
 # error:
 docker run --rm --name docker-signal --net=host -e DISPLAY=:0 -t docker-signal
 bwrap: No permissions to creating new namespace, likely because the kernel does not allow non-privileged user namespaces. On e.g. debian this can be enabled with 'sysctl kernel.unprivileged_userns_clone=1'.
