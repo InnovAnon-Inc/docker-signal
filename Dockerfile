@@ -1,4 +1,5 @@
 FROM poobuntu:latest
+MAINTAINER Innovations Anonymous <InnovAnon-Inc@protonmail.com>
 
 RUN apt-fast install -y flatpak libasound2
 
