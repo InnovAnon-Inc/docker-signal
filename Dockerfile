@@ -31,7 +31,6 @@ RUN flatpak install -y flathub org.signal.Signal
 #WORKDIR /
 #RUN apt-fast purge --autoremove flatpak
 RUN ./poobuntu-clean.sh
-RUN rm -v poobuntu-clean.sh
 
 #USER signal-user
 #WORKDIR /home/signal-user
