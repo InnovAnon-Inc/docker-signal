@@ -1,7 +1,18 @@
-FROM poobuntu:latest
+FROM innovanon/poobuntu:latest
 MAINTAINER Innovations Anonymous <InnovAnon-Inc@protonmail.com>
 
-RUN apt-fast install -y flatpak libasound2
+LABEL version="1.0"
+LABEL maintainer="Innovations Anonymous <InnovAnon-Inc@protonmail.com>"
+LABEL about="dockerized signal"
+LABEL org.label-schema.build-date=$BUILD_DATE
+LABEL org.label-schema.license="PDL (Public Domain License)"
+LABEL org.label-schema.name="docker-signal"
+LABEL org.label-schema.url="InnovAnon-Inc.github.io/docker-signal"
+LABEL org.label-schema.vcs-ref=$VCS_REF
+LABEL org.label-schema.vcs-type="Git"
+LABEL org.label-schema.vcs-url="https://github.com/InnovAnon-Inc/docker-signal"
+
+RUN apt-fast install -qy flatpak libasound2
 
 #RUN sysctl kernel.unprivileged_userns_clone=1
 
