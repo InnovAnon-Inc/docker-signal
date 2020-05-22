@@ -14,9 +14,9 @@ docker version ||
 dockerd &
 
 sudo             -- \
-nice -n -20      -- \
+nice -n +20      -- \
 sudo -u `whoami` -- \
-docker build -t docker-signal .
+docker build -t innovanon/docker-signal .
 
 docker push innovanon/docker-signal:latest || :
 
@@ -31,11 +31,14 @@ docker volume create  signalvol
 #	-v $XAUTHORITY:$XAUTHORITY        \
 #	-t docker-signal
 
+sudo             -- \
+nice -n -20      -- \
+sudo -u `whoami` -- \
 docker run --rm --name docker-signal      \
 	--net=host -e DISPLAY=${DISPLAY}  \
 	-v /tmp/.X11-unix/:/tmp/.X11-unix \
 	-v signalvol:/root                \
 	-e XAUTHORITY                     \
 	-v $XAUTHORITY:$XAUTHORITY        \
-	-t docker-signal
+	-t innovanon/docker-signal
 
