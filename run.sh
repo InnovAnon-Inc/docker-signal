@@ -18,6 +18,8 @@ nice -n -20      -- \
 sudo -u `whoami` -- \
 docker build -t docker-signal .
 
+docker push innovanon/docker-signal:latest || :
+
 docker volume inspect signalvol ||
 docker volume create  signalvol
 
@@ -36,3 +38,4 @@ docker run --rm --name docker-signal      \
 	-e XAUTHORITY                     \
 	-v $XAUTHORITY:$XAUTHORITY        \
 	-t docker-signal
+
