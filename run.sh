@@ -32,7 +32,7 @@ docker volume create  signalvol
 #	-t docker-signal
 
 sudo             -- \
-nice -n -20      -- \
+nice -n +20      -- \
 sudo -u `whoami` -- \
 docker run --rm --name docker-signal      \
 	--net=host -e DISPLAY=${DISPLAY}  \
