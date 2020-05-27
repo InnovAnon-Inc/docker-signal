@@ -1,4 +1,10 @@
 # docker-signal
+=====
+
+![Docker](https://github.com/InnovAnon-Inc/docker-signal/workflows/Docker/badge.svg)
+
+[![dockeri.co](https://dockeri.co/image/innovanon/docker-signal)](https://hub.docker.com/r/innovanon/docker-signal/)
+
 Container for running signal-desktop
 
 ## don't use signal... at all... ever.
