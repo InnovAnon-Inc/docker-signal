@@ -6,7 +6,7 @@ curl https://raw.githubusercontent.com/InnovAnon-Inc/repo/master/get-docker.sh |
 
 sudo             -- \
 nice -n +20      -- \
-sudo -u `whoami` -- \
+sudo -u "$USER" -- \
 docker build -t innovanon/docker-signal .
 
 docker push innovanon/docker-signal:latest || :
@@ -24,7 +24,7 @@ docker volume create  signalvol
 
 sudo             -- \
 nice -n +20      -- \
-sudo -u `whoami` -- \
+sudo -u "$USER" -- \
 docker run --rm --name docker-signal      \
 	--net=host -e DISPLAY=${DISPLAY}  \
 	-v /tmp/.X11-unix/:/tmp/.X11-unix \

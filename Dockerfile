@@ -12,6 +12,7 @@ LABEL org.label-schema.vcs-ref=$VCS_REF
 LABEL org.label-schema.vcs-type="Git"
 LABEL org.label-schema.vcs-url="https://github.com/InnovAnon-Inc/docker-signal"
 
+RUN apt-fast update
 RUN apt-fast install flatpak libasound2
 
 #RUN sysctl kernel.unprivileged_userns_clone=1
